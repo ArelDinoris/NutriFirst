@@ -37,7 +37,7 @@ NutriFirst adalah aplikasi web personalisasi yang memberikan rekomendasi menu ma
 ### 📌 Manual (Local Development)
 
 1. Clone repository  
-git clone https://github.com/CC26-PSU102/nutrifirst-dashboard.git  
+https://github.com/ArelDinoris/NutriFirst.git 
 
 2. Masuk ke folder proyek  
 cd nutrifirst-dashboard  
@@ -57,7 +57,7 @@ http://localhost:8501
 ### 🌐 Otomatis (Online - Tanpa Install)
 
 Akses GitHub repository  
-https://github.com/CC26-PSU102/nutrifirst-dashboard  
+https://github.com/ArelDinoris/NutriFirst.git  
 
 Buka file **url.txt** lalu klik URL berikut  
 https://nutrifirst-codebooster-codingcampdbs2026.streamlit.app  
