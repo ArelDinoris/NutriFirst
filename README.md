@@ -5,7 +5,7 @@
 ## 👥 List Anggota
 | No | ID | Nama | Role |
 |----|-----|------|------|
-| 1 | CFCC185D6Y2119 | Benediktus Pascal Sanjaya | Full-Stack Web Developer |
+| 1 | CFCC185D6Y2119 | Benediktus Paskal Sanjaya | Full-Stack Web Developer |
 | 2 | CFCC185D6Y2818 | Benediktus Geraldi | Full-Stack Web Developer |
 | 3 | CDCC185D6Y2675 | Arel Lafito Dinoris | Data Scientist |
 | 4 | CDCC185D6Y2746 | Jose Morinho Ngadio | Data Scientist |
