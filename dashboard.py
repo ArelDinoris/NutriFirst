@@ -247,7 +247,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🍽️ Daftar Menu", 
     "📊 Analisis Harga", 
     "🥩 Analisis Gizi", 
-    "💪 Rekomendasi Diet",
+    "💪 Rekomendasi",
     "📈 Korelasi"
 ])
 
@@ -355,36 +355,36 @@ with tab3:
     st.dataframe(top_efficient.style.format({'protein_per_100cal': '{:.2f}', 'harga': 'Rp {:,.0f}'}), use_container_width=True)
 
 # ================================================================
-# TAB 4: REKOMENDASI DIET
+# TAB 4: REKOMENDASI
 # ================================================================
 with tab4:
-    st.markdown("### 🥗 Rekomendasi Menu untuk Diet")
+    st.markdown("### 🥗 Rekomendasi Menu")
     st.markdown("**Kriteria:** Protein > 20g, Lemak < 15g, Karbohidrat < 20g")
     
-    ideal_diet = filtered_df[(filtered_df['proteins'] > 20) & 
+    ideal_stunting = filtered_df[(filtered_df['proteins'] > 20) & 
                              (filtered_df['fat'] < 15) & 
                              (filtered_df['carbohydrate'] < 20)]
     
-    if len(ideal_diet) > 0:
-        st.success(f"✅ Ditemukan {len(ideal_diet)} menu yang memenuhi kriteria diet!")
+    if len(ideal_stunting) > 0:
+        st.success(f"✅ Ditemukan {len(ideal_stunting)} menu yang memenuhi kriteria!")
         
-        top_diet = ideal_diet.nlargest(10, 'proteins')[['name', 'bahan_dasar', 'proteins', 'fat', 'carbohydrate', 'calories', 'harga']]
-        st.dataframe(top_diet.style.format({'harga': 'Rp {:,.0f}', 'calories': '{:.0f} kkal'}), use_container_width=True)
+        top_stunting = ideal_stunting.nlargest(10, 'proteins')[['name', 'bahan_dasar', 'proteins', 'fat', 'carbohydrate', 'calories', 'harga']]
+        st.dataframe(top_stunting.style.format({'harga': 'Rp {:,.0f}', 'calories': '{:.0f} kkal'}), use_container_width=True)
         
         # Visualisasi
         fig, ax = plt.subplots(figsize=(12, 6))
-        diet_melted = top_diet.melt(id_vars=['name', 'bahan_dasar'], 
+        stunting_melted = top_stunting.melt(id_vars=['name', 'bahan_dasar'], 
                                     value_vars=['proteins', 'fat', 'carbohydrate'],
                                     var_name='Nutrisi', value_name='Gram')
-        sns.barplot(data=diet_melted, x='name', y='Gram', hue='Nutrisi', palette='Set2', ax=ax)
-        ax.set_title('Komposisi Gizi Menu Rekomendasi Diet')
+        sns.barplot(data=stunting_melted, x='name', y='Gram', hue='Nutrisi', palette='Set2', ax=ax)
+        ax.set_title('Komposisi Gizi Menu Rekomendasi')
         ax.set_xlabel('Nama Menu')
         ax.set_ylabel('Gram')
         ax.tick_params(axis='x', rotation=45, labelsize=9)
         plt.tight_layout()
         st.pyplot(fig)
     else:
-        st.warning("⚠️ Tidak ada menu yang memenuhi kriteria diet dengan filter saat ini.")
+        st.warning("⚠️ Tidak ada menu yang memenuhi kriteria dengan filter saat ini.")
 
 # ================================================================
 # TAB 5: KORELASI HARGA VS PROTEIN
