@@ -26,7 +26,7 @@ NutriFirst adalah aplikasi web personalisasi yang memberikan rekomendasi menu ma
 | **Pagination** | Navigasi halaman untuk melihat daftar menu dengan jumlah fleksibel |
 | **Analisis Harga** | Distribusi dan statistik harga per bahan dasar |
 | **Analisis Gizi** | Hubungan protein vs lemak, matriks korelasi antar nutrisi |
-| **Rekomendasi Diet** | Menu dengan protein tinggi (>20g), rendah lemak (<15g) & karbohidrat (<20g) |
+| **Rekomendasi ** | Menu dengan protein tinggi (>20g), rendah lemak (<15g) & karbohidrat (<20g) |
 | **Korelasi Harga vs Protein** | Insight apakah harga mahal menjamin protein tinggi |
 | **Export Data** | Download daftar menu ke CSV |
 
