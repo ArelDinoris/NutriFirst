@@ -1,4 +1,4 @@
-# NutriFirst - Capstone Project Codingcamp DBS Foundation x Dicoding 2026
+# NutriFirst - Capstone Project Codingcamp DBS Foundation x Dicoding 2026 - Data Scientist
 
 **ID Tim Capstone Project:** CC26-PSU102
 
